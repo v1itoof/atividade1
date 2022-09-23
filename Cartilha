@@ -1,0 +1,41 @@
+import React from 'react';
+import { View, Text, Image, StyleSheet } from 'react-native';
+
+import imagem from '../assets/teste.jpeg';
+
+
+export default function Cartilha(){
+  return <View style={estilos.fundo}>
+        <View>
+          <Image source={imagem} style={estilos.topo}/>
+        </View>
+        <Text style={estilos.titulo}>Transtornos mentais:</Text>
+        <Text style={estilos.texto}>
+           você sabia que praticamente todas as pessoas que cometeram suicídio apresentavam pelo menos um transtorno psiquiátrico? Pessoas com depressão, transtorno bipolar, trantornos relacionados ao uso de drogas lícitas ou ilícitas(álcool, maconha, crack e cocaína, por exemplo), esquizofrenia e transtorno de personalidade fazem parte do grupo de risco. Dessa forma, a identificação e o tratamento dos trastornos mentais pelo médico psiquiatra estão entre os principais fatores de proteção na prevenção do suicídio. 
+        </Text>
+  </View>
+}
+
+const estilos = StyleSheet.create({
+   fundo:{
+     backgroundColor: "#263c70",
+     paddingBottom: 50,
+     borderBottomWidth: 1,
+     borderBottomColor: "white"
+   },
+   titulo: {
+     fontSize: 22,
+     fontWeight: "bold",
+     color: "white",
+     paddingHorizontal: 15,
+     paddingTop: 10
+   },
+   texto: {
+     color: "white",
+     paddingHorizontal: 30
+   },
+   topo: {
+    width: "300px",
+    height: "300px"
+  }
+});
